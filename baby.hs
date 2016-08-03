@@ -266,4 +266,9 @@ addThree2 = \x -> \y -> \z -> x + y + z
 flip3 :: (a -> b -> c) -> b -> a -> c
 flip3 f = \x y -> f y x
 
+sum2 :: (Num a) => [a] -> a
+sum2 xs = foldl (\acc x -> acc + x) 0 xs
+
+sum3 :: (Num a) => [a] -> a
+sum3 = foldl (+) 0
 
