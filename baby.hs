@@ -272,3 +272,6 @@ sum2 xs = foldl (\acc x -> acc + x) 0 xs
 sum3 :: (Num a) => [a] -> a
 sum3 = foldl (+) 0
 
+elem2 :: (Eq a) => a -> [a] -> Bool
+elem2 y ys = foldl (\acc x -> if x == y then True else acc) False ys
+
